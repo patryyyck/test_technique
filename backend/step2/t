@@ -1,0 +1,94 @@
+  0/23 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[1G[2K 20/23 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░]  86%[1G[2K 23/23 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ ------ -------------------------------------------------------------------------------------- 
+  [32mLine[39m   [32mDomain/Fleet.php[39m                                                                      
+ ------ -------------------------------------------------------------------------------------- 
+  9      Property Fulll\Domain\Fleet::$_vehicles type has no value type                        
+         specified in iterable type array.                                                     
+         💡 See:                                                                               
+            https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type  
+  74     Method Fulll\Domain\Fleet::getVehicles() return type has no value                     
+         type specified in iterable type array.                                                
+         💡 See:                                                                               
+            https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type  
+ ------ -------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------------------------- 
+  [32mLine[39m   [32mInfra/FleetRepository.php[39m                                                             
+ ------ -------------------------------------------------------------------------------------- 
+  11     Property Fulll\Infra\FleetRepository::$_fleets type has no value type                 
+         specified in iterable type array.                                                     
+         💡 See:                                                                               
+            https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type  
+ ------ -------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------- 
+  [32mLine[39m   [32mInfra/FleetRepositoryDB.php[39m                                          
+ ------ --------------------------------------------------------------------- 
+  37     Cannot access offset 'user_id' on mixed.                             
+  37     Parameter #1 $_user_id of class Fulll\Domain\Fleet constructor       
+         expects int, mixed given.                                            
+  38     Cannot access offset 'id' on mixed.                                  
+  38     Cannot call method setId() on Fulll\Domain\Fleet|null.               
+  78     Cannot access offset 'user_id' on mixed.                             
+  78     Parameter #1 $_user_id of class Fulll\Domain\Fleet constructor       
+         expects int, mixed given.                                            
+  78     Ternary operator condition is always true.                           
+  79     Cannot access offset 'id' on mixed.                                  
+  79     Parameter #1 $id of method Fulll\Domain\Fleet::setId() expects int,  
+         mixed given.                                                         
+  81     If condition is always true.                                         
+  107    PHPDoc tag @return with type void is incompatible with native type   
+         Fulll\Domain\Fleet|null.                                             
+  124    Cannot access offset 'id' on mixed.                                  
+  124    Cannot cast mixed to int.                                            
+ ------ --------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------------------------- 
+  [32mLine[39m   [32mInfra/VehicleRepository.php[39m                                                           
+ ------ -------------------------------------------------------------------------------------- 
+  9      Property Fulll\Infra\VehicleRepository::$_vehicles type has no value                  
+         type specified in iterable type array.                                                
+         💡 See:                                                                               
+            https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type  
+ ------ -------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  [32mLine[39m   [32mInfra/VehicleRepositoryDB.php[39m                                          
+ ------ ----------------------------------------------------------------------- 
+  42     Cannot access offset 'plate_number' on mixed.                          
+  42     Parameter #1 $_plateNumber of class Fulll\Domain\Vehicle constructor   
+         expects string, mixed given.                                           
+  44     Cannot access offset 'id' on mixed.                                    
+  44     Cannot cast mixed to int.                                              
+  45     Cannot access offset 'lat' on mixed.                                   
+  47     Parameter #1 $_lat of class Fulll\Domain\Location constructor expects  
+         float, mixed given.                                                    
+  48     Cannot access offset 'lng' on mixed.                                   
+  48     Parameter #2 $_lng of class Fulll\Domain\Location constructor expects  
+         float, mixed given.                                                    
+  49     Cannot access offset 'alt' on mixed.                                   
+  49     Parameter #3 $_alt of class Fulll\Domain\Location constructor expects  
+         float|null, mixed given.                                               
+  101    Cannot access offset 'id' on mixed.                                    
+  101    Cannot cast mixed to int.                                              
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  [32mLine[39m   [32mUI/Cli.php[39m                                                             
+ ------ ----------------------------------------------------------------------- 
+  64     Result of method Fulll\App\Command\CreateFleetHandler::handle()        
+         (void) is used.                                                        
+  66     Cannot call method getId() on null.                                    
+  72     Parameter #1 $_fleetRepository of class                                
+         Fulll\App\Command\RegisterVehicleHandler constructor expects           
+         Fulll\Infra\FleetRepository, Fulll\Infra\FleetRepositoryDB given.      
+  73     Parameter #2 $_vehicleRepository of class                              
+         Fulll\App\Command\RegisterVehicleHandler constructor expects           
+         Fulll\Infra\VehicleRepository, Fulll\Infra\VehicleRepositoryDB given.  
+ ------ ----------------------------------------------------------------------- 
+
+[37;41m                                                                                [39;49m
+[37;41m [ERROR] Found 33 errors                                                        [39;49m
+[37;41m                                                                                [39;49m
+
